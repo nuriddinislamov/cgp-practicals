@@ -1,9 +1,0 @@
-C:\Users\nuriddin\source\repos\cgp-practicals\Week_1\bin\Debug\Week_1.exe.config
-C:\Users\nuriddin\source\repos\cgp-practicals\Week_1\bin\Debug\Week_1.exe
-C:\Users\nuriddin\source\repos\cgp-practicals\Week_1\bin\Debug\Week_1.pdb
-C:\Users\nuriddin\source\repos\cgp-practicals\Week_1\obj\Debug\Week_1.csproj.AssemblyReference.cache
-C:\Users\nuriddin\source\repos\cgp-practicals\Week_1\obj\Debug\Week_1.Properties.Resources.resources
-C:\Users\nuriddin\source\repos\cgp-practicals\Week_1\obj\Debug\Week_1.csproj.GenerateResource.cache
-C:\Users\nuriddin\source\repos\cgp-practicals\Week_1\obj\Debug\Week_1.csproj.CoreCompileInputs.cache
-C:\Users\nuriddin\source\repos\cgp-practicals\Week_1\obj\Debug\Week_1.exe
-C:\Users\nuriddin\source\repos\cgp-practicals\Week_1\obj\Debug\Week_1.pdb
