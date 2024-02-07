@@ -25,7 +25,7 @@ namespace Week_1
         {
             Graphics g = e.Graphics;
             // Create a pen object
-            Pen blackPen = new Pen(Color.Black);
+            Pen blackPen = new Pen(Color.Red);
             // Draws a triangle
             g.DrawLine(blackPen, 50, 50, 100, 100);
             g.DrawLine(blackPen, 100, 100, 200, 100);
