@@ -24,30 +24,18 @@ namespace Week_1
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            // Create a pen object
-            Pen blackPen = new Pen(Color.Red);
-            // Draws a triangle
-            g.DrawLine(blackPen, 50, 50, 100, 100);
-            g.DrawLine(blackPen, 100, 100, 200, 100);
-            g.DrawLine(blackPen, 50, 50, 100, 100);
-            g.DrawLine(blackPen, 200, 100, 50, 50);
-            // Draw a rectangle
-            g.DrawRectangle(blackPen, 200, 200, 150, 150);
-            // Draw an ellipse
-            g.DrawEllipse(blackPen, new Rectangle(250, 50, 150, 100));
-            // Define points of a polygon
-            Point[] pts = {
-                            new Point(50, 300),
-                            new Point(150, 300),
-                            new Point(150, 400),
-                            new Point(100, 350),
-                            new Point(50, 400)
-                            };
-            // Define a colour for filling the polygon
-            Color myColour = Color.FromArgb(0, 255, 0);
-            SolidBrush brush = new SolidBrush(myColour);
-            // Draw filled polygon
-            g.FillPolygon(brush, pts);
+            Pen blackPen = new Pen(Color.Red, 3);
+
+            int squareX = 100;
+            int squareY = 100;
+            int sideLength = 200;
+
+            g.DrawRectangle(blackPen, squareX, squareY, sideLength, sideLength);
+
+            int circleDiameter = sideLength;
+
+            g.DrawEllipse(blackPen, squareX, squareY, circleDiameter, circleDiameter);
+
         }
     }
 }
