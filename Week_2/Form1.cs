@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Week_2
@@ -15,29 +8,28 @@ namespace Week_2
         public Form1()
         {
             InitializeComponent();
-            this.Paint += Form1_Paint;
-            
-        }
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
+            // Use lamba function
+            Paint += (object sender, PaintEventArgs e) => {
 
-            int numberOfTriangles = 3;
-            
-            PointF p1 = new Point(100, 100);
-            PointF p2 = new Point(500, 100);
-            PointF p3 = new Point(300, 446);
+                int numberOfTriangles = 3;
 
-            string text = $"Number of triangles: {numberOfTriangles}";
-            Font font = new Font("Arial", 12);
-            PointF location = new PointF(10, 10); // Top-left corner
-            e.Graphics.DrawString(text, font, Brushes.Black, location);
+                PointF p1 = new Point(100, 100);
+                PointF p2 = new Point(500, 100);
+                PointF p3 = new Point(300, 446);
 
-            DrawTriangle(e.Graphics, p1, p2, p3, numberOfTriangles);
+                string text = $"Number of triangles: {numberOfTriangles}";
+                Font font = new Font("Arial", 14);
+                PointF location = new PointF(10, 10); // Top-left corner
+                e.Graphics.DrawString(text, font, Brushes.Black, location);
+
+                DrawTriangle(e.Graphics, p1, p2, p3, numberOfTriangles);
+            };
+
         }
         private void DrawTriangle(Graphics g, PointF p1, PointF p2, PointF p3, int remainingTriangles)
         {
-            // Limit to drawing only 3 triangles, therefore if none left to draw then terminate the program.
+            // Limit to drawing only the number of 'numberOfTriangles' triangles, therefore if none left to draw then terminate the program.
             if (remainingTriangles == 0) return;
             g.DrawPolygon(Pens.Black, new[] { p1, p2, p3});
 
@@ -45,8 +37,7 @@ namespace Week_2
             PointF midP2P3 = MidPoint(p2, p3);
             PointF midP3P1 = MidPoint(p3, p1);
 
-            // Recursively draw the next triangle inside the current one until if condition is met
-            // before this is method is called again at the third iteration
+            // Recursively draw the next triangle inside the current one
             DrawTriangle(g, midP1P2, midP2P3, midP3P1, remainingTriangles - 1);
         }
 
