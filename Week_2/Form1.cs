@@ -54,12 +54,5 @@ namespace Week_2
         {
             return new PointF((p1.X + p2.X) / 2, (p1.Y + p2.Y) / 2);
         }
-
-        private float Distance(PointF p1, PointF p2)
-        {
-            // Euclidean distance
-            // Formula from https://en.wikipedia.org/wiki/Euclidean_distance
-            return (float)Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
-        }
     }
 }
