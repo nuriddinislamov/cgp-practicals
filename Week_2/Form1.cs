@@ -21,12 +21,19 @@ namespace Week_2
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+
+            int numberOfTriangles = 3;
             
             PointF p1 = new Point(100, 100);
             PointF p2 = new Point(500, 100);
             PointF p3 = new Point(300, 446);
 
-            DrawTriangle(e.Graphics, p1, p2, p3, 3);
+            string text = $"Number of triangles: {numberOfTriangles}";
+            Font font = new Font("Arial", 12);
+            PointF location = new PointF(10, 10); // Top-left corner
+            e.Graphics.DrawString(text, font, Brushes.Black, location);
+
+            DrawTriangle(e.Graphics, p1, p2, p3, numberOfTriangles);
         }
         private void DrawTriangle(Graphics g, PointF p1, PointF p2, PointF p3, int remainingTriangles)
         {
