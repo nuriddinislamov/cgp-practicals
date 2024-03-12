@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Week_1
@@ -24,17 +17,17 @@ namespace Week_1
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Pen blackPen = new Pen(Color.Red, 3);
+            Pen pen = new Pen(Color.Red, 2);
 
             int squareX = 100;
             int squareY = 100;
             int sideLength = 200;
 
-            g.DrawRectangle(blackPen, squareX, squareY, sideLength, sideLength);
+            g.DrawRectangle(pen, squareX, squareY, sideLength, sideLength);
 
             int circleDiameter = sideLength;
 
-            g.DrawEllipse(blackPen, squareX, squareY, circleDiameter, circleDiameter);
+            g.DrawEllipse(pen, squareX, squareY, circleDiameter, circleDiameter);
 
         }
     }
