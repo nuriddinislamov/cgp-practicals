@@ -15,6 +15,7 @@ namespace Week_3
         public Form1()
         {
             InitializeComponent();
+            // Minimal change
         }
     }
 }
