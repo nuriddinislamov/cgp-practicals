@@ -5,8 +5,16 @@ public class Program
     {
         try
         {
-            int[,] tempA = { { 2, 1, 3 }, { 1, 3, 2 } };
-            int[,] tempB = { { 35, 30 }, { 50, 40 }, { 70, 75 } };
+            // Taken from lecture slides example
+            int[,] tempA = {
+                { 2, 1, 3 },
+                { 1, 3, 2 }
+            };
+            int[,] tempB = {
+                { 35, 30 },
+                { 50, 40 },
+                { 70, 75 }
+            };
             Matrix2D a = new Matrix2D(tempA);
             Matrix2D b = new Matrix2D(tempB);
 
@@ -80,10 +88,23 @@ public class Matrix2D
 
         int[,] result = new int[matrixA.NumberOfRows(), matrixB.NumberOfColumns()];
 
+        // traverse each row and each column (each cell)
         for (int i = 0; i < result.GetLength(0); i++)
         {
             for (int j = 0; j < result.GetLength(1); j++)
             {
+                // author sid 2117032
+                // for each cell calculate new product cell value using multipliation
+                //
+                // Example:
+                // A = [1, 2]
+                // B = [3, 4]
+                //
+                // C(r,c) = A[0] * B[0] + A[1] * B[1]
+                // which results in
+                // 1 * 3 + 2 * 4 =>
+                // => 11
+
                 for (int k = 0; k < matrixA.NumberOfColumns(); k++)
                 {
                     result[i, j] += matrixA.matrix[i, k] * matrixB.matrix[k, j];
